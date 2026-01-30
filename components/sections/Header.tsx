@@ -12,7 +12,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 text-white bg-gradient-to-b from-[#C1121F] to-[#9e0f1a]">
       <div className="mx-auto max-w-6xl px-6 py-10 flex items-center justify-between">
         <Link href="/" className="font-semibold tracking-tight text-white">
-          RPeony
+          StirlingTech
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -28,8 +28,13 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="outline" className="border-white text-black hover:bg-white hover:text-[#C1121F]">
-            Contact
+          <Button
+            asChild
+            variant="outline"
+            className="border-white text-black hover:bg-white hover:text-[#C1121F]">
+            <Link href="mailto:StirlingTechInc@gmail.com">
+              Contact
+            </Link>
           </Button>
           <Button>Request demo</Button>
         </div>

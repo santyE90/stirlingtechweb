@@ -115,12 +115,37 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    background: #FDF0D5;
-    color: #111827; 
-  }
+.parallax-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  --mx: 0.5;
+  --my: 0.5;
+
+  /* Bigger movement */
+  --ox: calc((var(--mx) - 0.5) * 2);
+  --oy: calc((var(--my) - 0.5) * 2);
+
+  background:
+    radial-gradient(
+      1100px circle at calc(20% + var(--ox) * 20%) calc(25% + var(--oy) * 14%),
+      rgba(99, 102, 241, 0.34),  /* indigo glow (stronger) */
+      transparent 62%
+    ),
+    radial-gradient(
+      1000px circle at calc(82% + var(--ox) * 20%) calc(30% + var(--oy) * 14%),
+      rgba(14, 165, 233, 0.30),  /* sky glow (stronger) */
+      transparent 62%
+    ),
+    radial-gradient(
+      1200px circle at calc(65% + var(--ox) * 20%) calc(82% + var(--oy) * 14%),
+      rgba(148, 163, 184, 0.22), /* slate glow (stronger) */
+      transparent 66%
+    ),
+    linear-gradient(120deg, #f8fafc, #edf2f7, #f6f7fb);
+
+  /* Makes it feel smoother while moving */
+  filter: saturate(1.08) contrast(1.06);
 }

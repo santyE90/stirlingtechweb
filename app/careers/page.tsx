@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -6,19 +7,19 @@ const roles = [
     title: "Software Engineer",
     location: "Remote / Hybrid",
     type: "Full-time",
-    blurb: "Placeholder: build product features and infrastructure.",
+    blurb: "",
   },
   {
     title: "ML Engineer",
     location: "Remote / Hybrid",
     type: "Full-time",
-    blurb: "Placeholder: improve models, evals, and deployment pipeline.",
+    blurb: "",
   },
   {
-    title: "Founding PM",
+    title: "Marketing",
     location: "Remote / Hybrid",
     type: "Full-time",
-    blurb: "Placeholder: drive discovery, roadmap, and customer feedback loops.",
+    blurb: "",
   },
 ];
 
@@ -27,19 +28,26 @@ export default function CareersPage() {
     <main className="mx-auto max-w-6xl px-6 py-16">
       <h1 className="text-4xl font-semibold tracking-tight">Careers</h1>
       <p className="mt-4 text-gray-700 max-w-3xl">
-        Placeholder hiring pitch. What kind of people you want, what problems
-        they’ll work on, and what’s exciting about the mission.
+        We're not hiring at the moment, but we're always eager to connect with interesting people.
+        Check back soon as we continue to grow and open up new roles. 
       </p>
 
       <Card className="mt-10 p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-medium">Don’t see the right role?</p>
+            <p className="font-medium">Don’t see the right role for you?</p>
             <p className="mt-1 text-sm text-gray-700">
-              Send a note with what you’d like to work on.
+              Reach out and tell us what you can bring to the table.
             </p>
           </div>
-          <Button>Reach out</Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-white text-black hover:bg-white hover:text-[#C1121F]">
+              <Link href="mailto:StirlingTechInc@gmail.com">
+                Contact
+              </Link>
+            </Button>
         </div>
       </Card>
 

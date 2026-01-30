@@ -4,22 +4,40 @@ import { Button } from "@/components/ui/button";
 
 const posts = [
   {
-    title: "What we’re building",
+    title: "X",
     date: "Jan 2026",
     excerpt:
-      "Placeholder summary of the mission, what problem you’re tackling, and why it matters.",
+      "X",
   },
   {
-    title: "How the product works (high level)",
+    title: "Y",
     date: "Jan 2026",
     excerpt:
-      "Placeholder overview of the approach. Keep it non-technical for now.",
+      "Y",
   },
   {
-    title: "Behind the scenes: early results",
+    title: "Z",
     date: "Jan 2026",
     excerpt:
-      "Placeholder insights, customer learnings, metrics, or a short narrative.",
+      "Z",
+  },
+  {
+    title: "F",
+    date: "Jan 2026",
+    excerpt:
+      "F",
+  },
+  {
+    title: "W",
+    date: "Jan 2026",
+    excerpt:
+      "W",
+  },
+  {
+    title: "P",
+    date: "Jan 2026",
+    excerpt:
+      "P",
   },
 ];
 
@@ -30,7 +48,7 @@ export default function BlogPage() {
         <div>
           <h1 className="text-4xl font-semibold tracking-tight">Blog</h1>
           <p className="mt-3 text-gray-700">
-            Updates, ideas, and progress. Placeholder posts for now.
+            Updates, ideas, and progress.
           </p>
         </div>
 
